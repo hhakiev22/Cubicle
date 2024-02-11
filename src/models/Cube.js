@@ -7,4 +7,6 @@ const cubeSchema = {
   difficultyLevel: Number,
 };
 
-const cube = mongoose.Model("Cube", cubeSchema);
+const Cube = mongoose.model("Cube", cubeSchema);
+
+module.exports = Cube;
