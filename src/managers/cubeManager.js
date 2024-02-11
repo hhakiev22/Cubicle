@@ -41,6 +41,8 @@ exports.getAll = async (search, from, to) => {
 };
 
 exports.getOne = (cubeId) => Cube.findById(cubeId); // get data to details page
+exports.getOneWithAccessories = (cubeId) =>
+  this.getOne(cubeId).populate("accessories");
 
 exports.create = (cubeData) => {
   const cube = new Cube(cubeData);
