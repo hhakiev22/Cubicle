@@ -23,6 +23,8 @@ router.post("/login", async (req, res) => {
 
   await userManager.login(username, password);
 
+  res.cookie("auth", token, { httpOnly: true });
+
   res.redirect("/");
 });
 
